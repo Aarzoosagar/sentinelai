@@ -1,0 +1,1926 @@
+{
+  "dataset_queries": 20,
+  "systems": {
+    "FAISS": {
+      "metrics": {
+        "hit_at_1": 0.85,
+        "hit_at_3": 1.0,
+        "hit_at_5": 1.0,
+        "recall_at_1": 0.7333333333333334,
+        "recall_at_3": 0.9666666666666666,
+        "recall_at_5": 1.0,
+        "mrr": 0.9166666666666667
+      },
+      "per_query": [
+        {
+          "query": "How do I fix a public S3 bucket?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-s3-public-access",
+            "eval-s3-no-encryption",
+            "eval-cloudtrail-disabled",
+            "eval-kms-rotation-disabled",
+            "eval-iam-admin-policy"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-public-access"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-public-access": 0.7865979671478271,
+            "eval-s3-no-encryption": 0.7396119832992554,
+            "eval-cloudtrail-disabled": 0.6591334939002991,
+            "eval-kms-rotation-disabled": 0.6529124975204468,
+            "eval-iam-admin-policy": 0.6368479132652283,
+            "eval-iam-unused-keys": 0.6235480904579163,
+            "eval-ec2-open-ssh": 0.5874712467193604,
+            "eval-ec2-open-rdp": 0.5865826606750488
+          }
+        },
+        {
+          "query": "Which finding relates to CIS S3 public access?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-s3-public-access",
+            "eval-s3-no-encryption",
+            "eval-iam-admin-policy",
+            "eval-ec2-open-rdp",
+            "eval-ec2-open-ssh"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-public-access"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-public-access": 0.7920857071876526,
+            "eval-s3-no-encryption": 0.7419167160987854,
+            "eval-iam-admin-policy": 0.7043167352676392,
+            "eval-ec2-open-rdp": 0.6987810134887695,
+            "eval-ec2-open-ssh": 0.696632444858551,
+            "eval-kms-rotation-disabled": 0.6894526481628418,
+            "eval-iam-unused-keys": 0.672758936882019,
+            "eval-cloudtrail-disabled": 0.6496185064315796
+          }
+        },
+        {
+          "query": "Which resource can be accessed by anyone on the internet?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-s3-public-access",
+            "eval-iam-admin-policy",
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp",
+            "eval-s3-no-encryption"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-public-access",
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 0.3333333333333333,
+          "hit_at_3": true,
+          "recall_at_3": 0.6666666666666666,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-public-access": 0.7078051567077637,
+            "eval-iam-admin-policy": 0.6919053792953491,
+            "eval-ec2-open-ssh": 0.6721823215484619,
+            "eval-ec2-open-rdp": 0.6682120561599731,
+            "eval-s3-no-encryption": 0.6203206181526184,
+            "eval-cloudtrail-disabled": 0.6183017492294312,
+            "eval-iam-unused-keys": 0.6017040014266968,
+            "eval-kms-rotation-disabled": 0.5739938020706177
+          }
+        },
+        {
+          "query": "How can I reduce unnecessary access?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-iam-unused-keys",
+            "eval-iam-admin-policy",
+            "eval-s3-public-access",
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-admin-policy",
+            "eval-iam-unused-keys"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 0.5,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-iam-unused-keys": 0.6467971801757812,
+            "eval-iam-admin-policy": 0.6399407386779785,
+            "eval-s3-public-access": 0.6239627003669739,
+            "eval-ec2-open-ssh": 0.6124284267425537,
+            "eval-ec2-open-rdp": 0.6085702776908875,
+            "eval-cloudtrail-disabled": 0.5976482629776001,
+            "eval-s3-no-encryption": 0.5846530199050903,
+            "eval-kms-rotation-disabled": 0.5532432794570923
+          }
+        },
+        {
+          "query": "What is wrong with this IAM policy?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-iam-admin-policy",
+            "eval-iam-unused-keys",
+            "eval-cloudtrail-disabled",
+            "eval-s3-public-access",
+            "eval-ec2-open-rdp"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-admin-policy"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-iam-admin-policy": 0.772156298160553,
+            "eval-iam-unused-keys": 0.7570372819900513,
+            "eval-cloudtrail-disabled": 0.6546083688735962,
+            "eval-s3-public-access": 0.6289981007575989,
+            "eval-ec2-open-rdp": 0.6261163949966431,
+            "eval-kms-rotation-disabled": 0.6221895813941956,
+            "eval-ec2-open-ssh": 0.6189754009246826,
+            "eval-s3-no-encryption": 0.5827683806419373
+          }
+        },
+        {
+          "query": "How do I remediate unrestricted SSH access?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp",
+            "eval-iam-unused-keys",
+            "eval-iam-admin-policy",
+            "eval-s3-public-access"
+          ],
+          "relevant_finding_ids": [
+            "eval-ec2-open-ssh"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-ec2-open-ssh": 0.7703991532325745,
+            "eval-ec2-open-rdp": 0.7234310507774353,
+            "eval-iam-unused-keys": 0.677995502948761,
+            "eval-iam-admin-policy": 0.6682415008544922,
+            "eval-s3-public-access": 0.6575613617897034,
+            "eval-s3-no-encryption": 0.6554460525512695,
+            "eval-cloudtrail-disabled": 0.6414777040481567,
+            "eval-kms-rotation-disabled": 0.6224451661109924
+          }
+        },
+        {
+          "query": "Port 22 is exposed to the world",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp",
+            "eval-iam-admin-policy",
+            "eval-s3-public-access",
+            "eval-cloudtrail-disabled"
+          ],
+          "relevant_finding_ids": [
+            "eval-ec2-open-ssh"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-ec2-open-ssh": 0.7478675842285156,
+            "eval-ec2-open-rdp": 0.7043657302856445,
+            "eval-iam-admin-policy": 0.6601291298866272,
+            "eval-s3-public-access": 0.6286860108375549,
+            "eval-cloudtrail-disabled": 0.6256500482559204,
+            "eval-iam-unused-keys": 0.6202454566955566,
+            "eval-s3-no-encryption": 0.6043732762336731,
+            "eval-kms-rotation-disabled": 0.5884665846824646
+          }
+        },
+        {
+          "query": "How do I secure remote desktop access?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp",
+            "eval-iam-admin-policy",
+            "eval-iam-unused-keys",
+            "eval-s3-public-access"
+          ],
+          "relevant_finding_ids": [
+            "eval-ec2-open-rdp"
+          ],
+          "first_relevant_rank": 2,
+          "hit_at_1": false,
+          "recall_at_1": 0.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-ec2-open-ssh": 0.6946808099746704,
+            "eval-ec2-open-rdp": 0.6890851855278015,
+            "eval-iam-admin-policy": 0.6589733362197876,
+            "eval-iam-unused-keys": 0.6467181444168091,
+            "eval-s3-public-access": 0.64617919921875,
+            "eval-kms-rotation-disabled": 0.6248142123222351,
+            "eval-s3-no-encryption": 0.6200973987579346,
+            "eval-cloudtrail-disabled": 0.610082745552063
+          }
+        },
+        {
+          "query": "Which CIS control covers open SSH security groups?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp",
+            "eval-iam-admin-policy",
+            "eval-s3-no-encryption",
+            "eval-kms-rotation-disabled"
+          ],
+          "relevant_finding_ids": [
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 0.5,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-ec2-open-ssh": 0.7909408211708069,
+            "eval-ec2-open-rdp": 0.7578162550926208,
+            "eval-iam-admin-policy": 0.7101891040802002,
+            "eval-s3-no-encryption": 0.6919723153114319,
+            "eval-kms-rotation-disabled": 0.6834777593612671,
+            "eval-s3-public-access": 0.6814520359039307,
+            "eval-iam-unused-keys": 0.6694097518920898,
+            "eval-cloudtrail-disabled": 0.6409598588943481
+          }
+        },
+        {
+          "query": "Find the NIST AC-6 least privilege issue",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-iam-admin-policy",
+            "eval-iam-unused-keys",
+            "eval-cloudtrail-disabled",
+            "eval-s3-public-access",
+            "eval-ec2-open-rdp"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-admin-policy"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-iam-admin-policy": 0.682459831237793,
+            "eval-iam-unused-keys": 0.654539942741394,
+            "eval-cloudtrail-disabled": 0.6333550810813904,
+            "eval-s3-public-access": 0.6260385513305664,
+            "eval-ec2-open-rdp": 0.6254185438156128,
+            "eval-ec2-open-ssh": 0.6191054582595825,
+            "eval-s3-no-encryption": 0.6060571670532227,
+            "eval-kms-rotation-disabled": 0.6046333909034729
+          }
+        },
+        {
+          "query": "What should I do about old IAM access keys?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-iam-unused-keys",
+            "eval-iam-admin-policy",
+            "eval-kms-rotation-disabled",
+            "eval-cloudtrail-disabled",
+            "eval-s3-no-encryption"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-unused-keys"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-iam-unused-keys": 0.8350347280502319,
+            "eval-iam-admin-policy": 0.7275604009628296,
+            "eval-kms-rotation-disabled": 0.6734037399291992,
+            "eval-cloudtrail-disabled": 0.6252239942550659,
+            "eval-s3-no-encryption": 0.6109012365341187,
+            "eval-ec2-open-rdp": 0.6080862283706665,
+            "eval-ec2-open-ssh": 0.6023080348968506,
+            "eval-s3-public-access": 0.5994471311569214
+          }
+        },
+        {
+          "query": "Which finding maps to NIST IA-5?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-iam-unused-keys",
+            "eval-iam-admin-policy",
+            "eval-cloudtrail-disabled",
+            "eval-ec2-open-rdp",
+            "eval-kms-rotation-disabled"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-unused-keys"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-iam-unused-keys": 0.675920844078064,
+            "eval-iam-admin-policy": 0.6611125469207764,
+            "eval-cloudtrail-disabled": 0.605363130569458,
+            "eval-ec2-open-rdp": 0.5828106999397278,
+            "eval-kms-rotation-disabled": 0.5763787627220154,
+            "eval-ec2-open-ssh": 0.5718492865562439,
+            "eval-s3-public-access": 0.5606935620307922,
+            "eval-s3-no-encryption": 0.5548023581504822
+          }
+        },
+        {
+          "query": "How can I encrypt new objects in S3?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-s3-no-encryption",
+            "eval-s3-public-access",
+            "eval-kms-rotation-disabled",
+            "eval-iam-admin-policy",
+            "eval-iam-unused-keys"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-no-encryption"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-no-encryption": 0.7638788223266602,
+            "eval-s3-public-access": 0.7064310312271118,
+            "eval-kms-rotation-disabled": 0.6290544271469116,
+            "eval-iam-admin-policy": 0.6021682024002075,
+            "eval-iam-unused-keys": 0.600645124912262,
+            "eval-ec2-open-ssh": 0.5963252186775208,
+            "eval-ec2-open-rdp": 0.5768129825592041,
+            "eval-cloudtrail-disabled": 0.5650051832199097
+          }
+        },
+        {
+          "query": "Which bucket is missing encryption at rest?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-s3-no-encryption",
+            "eval-s3-public-access",
+            "eval-cloudtrail-disabled",
+            "eval-kms-rotation-disabled",
+            "eval-iam-unused-keys"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-no-encryption"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-no-encryption": 0.780353844165802,
+            "eval-s3-public-access": 0.7207961082458496,
+            "eval-cloudtrail-disabled": 0.7051832675933838,
+            "eval-kms-rotation-disabled": 0.6810579895973206,
+            "eval-iam-unused-keys": 0.6797999143600464,
+            "eval-ec2-open-ssh": 0.677054762840271,
+            "eval-ec2-open-rdp": 0.6659963130950928,
+            "eval-iam-admin-policy": 0.6615743041038513
+          }
+        },
+        {
+          "query": "How do I restore AWS audit logs?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-cloudtrail-disabled",
+            "eval-iam-unused-keys",
+            "eval-iam-admin-policy",
+            "eval-s3-no-encryption",
+            "eval-s3-public-access"
+          ],
+          "relevant_finding_ids": [
+            "eval-cloudtrail-disabled"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-cloudtrail-disabled": 0.7572016716003418,
+            "eval-iam-unused-keys": 0.6847394108772278,
+            "eval-iam-admin-policy": 0.6791704893112183,
+            "eval-s3-no-encryption": 0.6422667503356934,
+            "eval-s3-public-access": 0.6405038833618164,
+            "eval-ec2-open-rdp": 0.6294357776641846,
+            "eval-ec2-open-ssh": 0.6252084970474243,
+            "eval-kms-rotation-disabled": 0.6213698387145996
+          }
+        },
+        {
+          "query": "Which finding maps to NIST AU-2?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-iam-admin-policy",
+            "eval-iam-unused-keys",
+            "eval-cloudtrail-disabled",
+            "eval-ec2-open-rdp",
+            "eval-kms-rotation-disabled"
+          ],
+          "relevant_finding_ids": [
+            "eval-cloudtrail-disabled"
+          ],
+          "first_relevant_rank": 3,
+          "hit_at_1": false,
+          "recall_at_1": 0.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-iam-admin-policy": 0.6604095697402954,
+            "eval-iam-unused-keys": 0.6378613710403442,
+            "eval-cloudtrail-disabled": 0.6156869530677795,
+            "eval-ec2-open-rdp": 0.6061036586761475,
+            "eval-kms-rotation-disabled": 0.5993170142173767,
+            "eval-s3-public-access": 0.5990515947341919,
+            "eval-ec2-open-ssh": 0.5968978404998779,
+            "eval-s3-no-encryption": 0.5881094932556152
+          }
+        },
+        {
+          "query": "How do I rotate a KMS key?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-kms-rotation-disabled",
+            "eval-iam-unused-keys",
+            "eval-s3-no-encryption",
+            "eval-cloudtrail-disabled",
+            "eval-iam-admin-policy"
+          ],
+          "relevant_finding_ids": [
+            "eval-kms-rotation-disabled"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-kms-rotation-disabled": 0.7963688373565674,
+            "eval-iam-unused-keys": 0.6836510896682739,
+            "eval-s3-no-encryption": 0.6211885809898376,
+            "eval-cloudtrail-disabled": 0.5718748569488525,
+            "eval-iam-admin-policy": 0.5699694156646729,
+            "eval-ec2-open-rdp": 0.5515706539154053,
+            "eval-ec2-open-ssh": 0.5387262105941772,
+            "eval-s3-public-access": 0.5364465117454529
+          }
+        },
+        {
+          "query": "Which finding concerns cryptographic key rotation?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-kms-rotation-disabled",
+            "eval-iam-unused-keys",
+            "eval-s3-no-encryption",
+            "eval-iam-admin-policy",
+            "eval-ec2-open-rdp"
+          ],
+          "relevant_finding_ids": [
+            "eval-kms-rotation-disabled"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-kms-rotation-disabled": 0.7477196455001831,
+            "eval-iam-unused-keys": 0.7379727363586426,
+            "eval-s3-no-encryption": 0.6503592133522034,
+            "eval-iam-admin-policy": 0.6438520550727844,
+            "eval-ec2-open-rdp": 0.6186873912811279,
+            "eval-ec2-open-ssh": 0.6163030862808228,
+            "eval-cloudtrail-disabled": 0.6002910733222961,
+            "eval-s3-public-access": 0.5947977304458618
+          }
+        },
+        {
+          "query": "What exposes a service directly to the internet?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-s3-public-access",
+            "eval-ec2-open-rdp",
+            "eval-iam-admin-policy",
+            "eval-ec2-open-ssh",
+            "eval-s3-no-encryption"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-public-access",
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 0.3333333333333333,
+          "hit_at_3": true,
+          "recall_at_3": 0.6666666666666666,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-public-access": 0.6977350115776062,
+            "eval-ec2-open-rdp": 0.6796071529388428,
+            "eval-iam-admin-policy": 0.672664225101471,
+            "eval-ec2-open-ssh": 0.6628127098083496,
+            "eval-s3-no-encryption": 0.6426985859870911,
+            "eval-cloudtrail-disabled": 0.6328490972518921,
+            "eval-kms-rotation-disabled": 0.5996475219726562,
+            "eval-iam-unused-keys": 0.588120698928833
+          }
+        },
+        {
+          "query": "How do I apply least privilege in AWS?",
+          "system": "FAISS",
+          "retrieved_finding_ids": [
+            "eval-s3-public-access",
+            "eval-iam-admin-policy",
+            "eval-s3-no-encryption",
+            "eval-ec2-open-ssh",
+            "eval-cloudtrail-disabled"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-admin-policy"
+          ],
+          "first_relevant_rank": 2,
+          "hit_at_1": false,
+          "recall_at_1": 0.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-public-access": 0.703219473361969,
+            "eval-iam-admin-policy": 0.6946645379066467,
+            "eval-s3-no-encryption": 0.6920139789581299,
+            "eval-ec2-open-ssh": 0.6699788570404053,
+            "eval-cloudtrail-disabled": 0.6521556377410889,
+            "eval-ec2-open-rdp": 0.6521092653274536,
+            "eval-iam-unused-keys": 0.6467427015304565,
+            "eval-kms-rotation-disabled": 0.6317099332809448
+          }
+        }
+      ],
+      "failures": []
+    },
+    "Hybrid": {
+      "metrics": {
+        "hit_at_1": 0.9,
+        "hit_at_3": 0.95,
+        "hit_at_5": 1.0,
+        "recall_at_1": 0.7833333333333334,
+        "recall_at_3": 0.8750000000000002,
+        "recall_at_5": 0.9583333333333333,
+        "mrr": 0.9291666666666666
+      },
+      "per_query": [
+        {
+          "query": "How do I fix a public S3 bucket?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-s3-public-access",
+            "eval-s3-no-encryption",
+            "eval-cloudtrail-disabled",
+            "eval-kms-rotation-disabled",
+            "eval-iam-admin-policy"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-public-access"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-public-access": 0.7865979671478271,
+            "eval-s3-no-encryption": 0.7396119832992554,
+            "eval-cloudtrail-disabled": 0.6591334939002991,
+            "eval-kms-rotation-disabled": 0.6529124975204468,
+            "eval-iam-admin-policy": 0.6368479132652283,
+            "eval-iam-unused-keys": 0.6235480904579163,
+            "eval-ec2-open-ssh": 0.5874712467193604,
+            "eval-ec2-open-rdp": 0.5865826606750488
+          }
+        },
+        {
+          "query": "Which finding relates to CIS S3 public access?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-s3-public-access",
+            "eval-s3-no-encryption",
+            "eval-ec2-open-rdp",
+            "eval-ec2-open-ssh",
+            "eval-iam-admin-policy"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-public-access"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-public-access": 0.7920857071876526,
+            "eval-s3-no-encryption": 0.7419167160987854,
+            "eval-iam-admin-policy": 0.7043167352676392,
+            "eval-ec2-open-rdp": 0.6987810134887695,
+            "eval-ec2-open-ssh": 0.696632444858551,
+            "eval-kms-rotation-disabled": 0.6894526481628418,
+            "eval-iam-unused-keys": 0.672758936882019,
+            "eval-cloudtrail-disabled": 0.6496185064315796
+          }
+        },
+        {
+          "query": "Which resource can be accessed by anyone on the internet?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-s3-public-access",
+            "eval-iam-admin-policy",
+            "eval-s3-no-encryption",
+            "eval-ec2-open-ssh",
+            "eval-cloudtrail-disabled"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-public-access",
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 0.3333333333333333,
+          "hit_at_3": true,
+          "recall_at_3": 0.3333333333333333,
+          "hit_at_5": true,
+          "recall_at_5": 0.6666666666666666,
+          "semantic_scores": {
+            "eval-s3-public-access": 0.7078051567077637,
+            "eval-iam-admin-policy": 0.6919053792953491,
+            "eval-ec2-open-ssh": 0.6721823215484619,
+            "eval-ec2-open-rdp": 0.6682120561599731,
+            "eval-s3-no-encryption": 0.6203206181526184,
+            "eval-cloudtrail-disabled": 0.6183017492294312,
+            "eval-iam-unused-keys": 0.6017040014266968,
+            "eval-kms-rotation-disabled": 0.5739938020706177
+          }
+        },
+        {
+          "query": "How can I reduce unnecessary access?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-iam-unused-keys",
+            "eval-s3-public-access",
+            "eval-s3-no-encryption",
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-admin-policy",
+            "eval-iam-unused-keys"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 0.5,
+          "hit_at_3": true,
+          "recall_at_3": 0.5,
+          "hit_at_5": true,
+          "recall_at_5": 0.5,
+          "semantic_scores": {
+            "eval-iam-unused-keys": 0.6467971801757812,
+            "eval-iam-admin-policy": 0.6399407386779785,
+            "eval-s3-public-access": 0.6239627003669739,
+            "eval-ec2-open-ssh": 0.6124284267425537,
+            "eval-ec2-open-rdp": 0.6085702776908875,
+            "eval-cloudtrail-disabled": 0.5976482629776001,
+            "eval-s3-no-encryption": 0.5846530199050903,
+            "eval-kms-rotation-disabled": 0.5532432794570923
+          }
+        },
+        {
+          "query": "What is wrong with this IAM policy?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-iam-admin-policy",
+            "eval-iam-unused-keys",
+            "eval-s3-public-access",
+            "eval-cloudtrail-disabled",
+            "eval-ec2-open-rdp"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-admin-policy"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-iam-admin-policy": 0.772156298160553,
+            "eval-iam-unused-keys": 0.7570372819900513,
+            "eval-cloudtrail-disabled": 0.6546083688735962,
+            "eval-s3-public-access": 0.6289981007575989,
+            "eval-ec2-open-rdp": 0.6261163949966431,
+            "eval-kms-rotation-disabled": 0.6221895813941956,
+            "eval-ec2-open-ssh": 0.6189754009246826,
+            "eval-s3-no-encryption": 0.5827683806419373
+          }
+        },
+        {
+          "query": "How do I remediate unrestricted SSH access?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp",
+            "eval-iam-unused-keys",
+            "eval-s3-public-access",
+            "eval-iam-admin-policy"
+          ],
+          "relevant_finding_ids": [
+            "eval-ec2-open-ssh"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-ec2-open-ssh": 0.7703991532325745,
+            "eval-ec2-open-rdp": 0.7234310507774353,
+            "eval-iam-unused-keys": 0.677995502948761,
+            "eval-iam-admin-policy": 0.6682415008544922,
+            "eval-s3-public-access": 0.6575613617897034,
+            "eval-s3-no-encryption": 0.6554460525512695,
+            "eval-cloudtrail-disabled": 0.6414777040481567,
+            "eval-kms-rotation-disabled": 0.6224451661109924
+          }
+        },
+        {
+          "query": "Port 22 is exposed to the world",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp",
+            "eval-cloudtrail-disabled",
+            "eval-s3-public-access",
+            "eval-s3-no-encryption"
+          ],
+          "relevant_finding_ids": [
+            "eval-ec2-open-ssh"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-ec2-open-ssh": 0.7478675842285156,
+            "eval-ec2-open-rdp": 0.7043657302856445,
+            "eval-iam-admin-policy": 0.6601291298866272,
+            "eval-s3-public-access": 0.6286860108375549,
+            "eval-cloudtrail-disabled": 0.6256500482559204,
+            "eval-iam-unused-keys": 0.6202454566955566,
+            "eval-s3-no-encryption": 0.6043732762336731,
+            "eval-kms-rotation-disabled": 0.5884665846824646
+          }
+        },
+        {
+          "query": "How do I secure remote desktop access?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-ec2-open-ssh",
+            "eval-iam-unused-keys",
+            "eval-ec2-open-rdp",
+            "eval-s3-public-access",
+            "eval-iam-admin-policy"
+          ],
+          "relevant_finding_ids": [
+            "eval-ec2-open-rdp"
+          ],
+          "first_relevant_rank": 3,
+          "hit_at_1": false,
+          "recall_at_1": 0.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-ec2-open-ssh": 0.6946808099746704,
+            "eval-ec2-open-rdp": 0.6890851855278015,
+            "eval-iam-admin-policy": 0.6589733362197876,
+            "eval-iam-unused-keys": 0.6467181444168091,
+            "eval-s3-public-access": 0.64617919921875,
+            "eval-kms-rotation-disabled": 0.6248142123222351,
+            "eval-s3-no-encryption": 0.6200973987579346,
+            "eval-cloudtrail-disabled": 0.610082745552063
+          }
+        },
+        {
+          "query": "Which CIS control covers open SSH security groups?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp",
+            "eval-s3-no-encryption",
+            "eval-iam-admin-policy",
+            "eval-kms-rotation-disabled"
+          ],
+          "relevant_finding_ids": [
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 0.5,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-ec2-open-ssh": 0.7909408211708069,
+            "eval-ec2-open-rdp": 0.7578162550926208,
+            "eval-iam-admin-policy": 0.7101891040802002,
+            "eval-s3-no-encryption": 0.6919723153114319,
+            "eval-kms-rotation-disabled": 0.6834777593612671,
+            "eval-s3-public-access": 0.6814520359039307,
+            "eval-iam-unused-keys": 0.6694097518920898,
+            "eval-cloudtrail-disabled": 0.6409598588943481
+          }
+        },
+        {
+          "query": "Find the NIST AC-6 least privilege issue",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-iam-admin-policy",
+            "eval-s3-public-access",
+            "eval-cloudtrail-disabled",
+            "eval-iam-unused-keys",
+            "eval-s3-no-encryption"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-admin-policy"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-iam-admin-policy": 0.682459831237793,
+            "eval-iam-unused-keys": 0.654539942741394,
+            "eval-cloudtrail-disabled": 0.6333550810813904,
+            "eval-s3-public-access": 0.6260385513305664,
+            "eval-ec2-open-rdp": 0.6254185438156128,
+            "eval-ec2-open-ssh": 0.6191054582595825,
+            "eval-s3-no-encryption": 0.6060571670532227,
+            "eval-kms-rotation-disabled": 0.6046333909034729
+          }
+        },
+        {
+          "query": "What should I do about old IAM access keys?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-iam-unused-keys",
+            "eval-iam-admin-policy",
+            "eval-ec2-open-rdp",
+            "eval-s3-public-access",
+            "eval-ec2-open-ssh"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-unused-keys"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-iam-unused-keys": 0.8350347280502319,
+            "eval-iam-admin-policy": 0.7275604009628296,
+            "eval-kms-rotation-disabled": 0.6734037399291992,
+            "eval-cloudtrail-disabled": 0.6252239942550659,
+            "eval-s3-no-encryption": 0.6109012365341187,
+            "eval-ec2-open-rdp": 0.6080862283706665,
+            "eval-ec2-open-ssh": 0.6023080348968506,
+            "eval-s3-public-access": 0.5994471311569214
+          }
+        },
+        {
+          "query": "Which finding maps to NIST IA-5?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-iam-unused-keys",
+            "eval-ec2-open-rdp",
+            "eval-ec2-open-ssh",
+            "eval-cloudtrail-disabled",
+            "eval-iam-admin-policy"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-unused-keys"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-iam-unused-keys": 0.675920844078064,
+            "eval-iam-admin-policy": 0.6611125469207764,
+            "eval-cloudtrail-disabled": 0.605363130569458,
+            "eval-ec2-open-rdp": 0.5828106999397278,
+            "eval-kms-rotation-disabled": 0.5763787627220154,
+            "eval-ec2-open-ssh": 0.5718492865562439,
+            "eval-s3-public-access": 0.5606935620307922,
+            "eval-s3-no-encryption": 0.5548023581504822
+          }
+        },
+        {
+          "query": "How can I encrypt new objects in S3?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-s3-no-encryption",
+            "eval-s3-public-access",
+            "eval-kms-rotation-disabled",
+            "eval-iam-admin-policy",
+            "eval-iam-unused-keys"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-no-encryption"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-no-encryption": 0.7638788223266602,
+            "eval-s3-public-access": 0.7064310312271118,
+            "eval-kms-rotation-disabled": 0.6290544271469116,
+            "eval-iam-admin-policy": 0.6021682024002075,
+            "eval-iam-unused-keys": 0.600645124912262,
+            "eval-ec2-open-ssh": 0.5963252186775208,
+            "eval-ec2-open-rdp": 0.5768129825592041,
+            "eval-cloudtrail-disabled": 0.5650051832199097
+          }
+        },
+        {
+          "query": "Which bucket is missing encryption at rest?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-s3-no-encryption",
+            "eval-s3-public-access",
+            "eval-kms-rotation-disabled",
+            "eval-cloudtrail-disabled",
+            "eval-ec2-open-rdp"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-no-encryption"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-no-encryption": 0.780353844165802,
+            "eval-s3-public-access": 0.7207961082458496,
+            "eval-cloudtrail-disabled": 0.7051832675933838,
+            "eval-kms-rotation-disabled": 0.6810579895973206,
+            "eval-iam-unused-keys": 0.6797999143600464,
+            "eval-ec2-open-ssh": 0.677054762840271,
+            "eval-ec2-open-rdp": 0.6659963130950928,
+            "eval-iam-admin-policy": 0.6615743041038513
+          }
+        },
+        {
+          "query": "How do I restore AWS audit logs?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-cloudtrail-disabled",
+            "eval-iam-unused-keys",
+            "eval-s3-no-encryption",
+            "eval-ec2-open-rdp",
+            "eval-iam-admin-policy"
+          ],
+          "relevant_finding_ids": [
+            "eval-cloudtrail-disabled"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-cloudtrail-disabled": 0.7572016716003418,
+            "eval-iam-unused-keys": 0.6847394108772278,
+            "eval-iam-admin-policy": 0.6791704893112183,
+            "eval-s3-no-encryption": 0.6422667503356934,
+            "eval-s3-public-access": 0.6405038833618164,
+            "eval-ec2-open-rdp": 0.6294357776641846,
+            "eval-ec2-open-ssh": 0.6252084970474243,
+            "eval-kms-rotation-disabled": 0.6213698387145996
+          }
+        },
+        {
+          "query": "Which finding maps to NIST AU-2?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-cloudtrail-disabled",
+            "eval-ec2-open-rdp",
+            "eval-iam-admin-policy",
+            "eval-iam-unused-keys",
+            "eval-ec2-open-ssh"
+          ],
+          "relevant_finding_ids": [
+            "eval-cloudtrail-disabled"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-iam-admin-policy": 0.6604095697402954,
+            "eval-iam-unused-keys": 0.6378613710403442,
+            "eval-cloudtrail-disabled": 0.6156869530677795,
+            "eval-ec2-open-rdp": 0.6061036586761475,
+            "eval-kms-rotation-disabled": 0.5993170142173767,
+            "eval-s3-public-access": 0.5990515947341919,
+            "eval-ec2-open-ssh": 0.5968978404998779,
+            "eval-s3-no-encryption": 0.5881094932556152
+          }
+        },
+        {
+          "query": "How do I rotate a KMS key?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-kms-rotation-disabled",
+            "eval-iam-unused-keys",
+            "eval-cloudtrail-disabled",
+            "eval-s3-no-encryption",
+            "eval-iam-admin-policy"
+          ],
+          "relevant_finding_ids": [
+            "eval-kms-rotation-disabled"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-kms-rotation-disabled": 0.7963688373565674,
+            "eval-iam-unused-keys": 0.6836510896682739,
+            "eval-s3-no-encryption": 0.6211885809898376,
+            "eval-cloudtrail-disabled": 0.5718748569488525,
+            "eval-iam-admin-policy": 0.5699694156646729,
+            "eval-ec2-open-rdp": 0.5515706539154053,
+            "eval-ec2-open-ssh": 0.5387262105941772,
+            "eval-s3-public-access": 0.5364465117454529
+          }
+        },
+        {
+          "query": "Which finding concerns cryptographic key rotation?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-kms-rotation-disabled",
+            "eval-iam-unused-keys",
+            "eval-s3-no-encryption",
+            "eval-iam-admin-policy",
+            "eval-ec2-open-rdp"
+          ],
+          "relevant_finding_ids": [
+            "eval-kms-rotation-disabled"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-kms-rotation-disabled": 0.7477196455001831,
+            "eval-iam-unused-keys": 0.7379727363586426,
+            "eval-s3-no-encryption": 0.6503592133522034,
+            "eval-iam-admin-policy": 0.6438520550727844,
+            "eval-ec2-open-rdp": 0.6186873912811279,
+            "eval-ec2-open-ssh": 0.6163030862808228,
+            "eval-cloudtrail-disabled": 0.6002910733222961,
+            "eval-s3-public-access": 0.5947977304458618
+          }
+        },
+        {
+          "query": "What exposes a service directly to the internet?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-s3-public-access",
+            "eval-cloudtrail-disabled",
+            "eval-ec2-open-rdp",
+            "eval-ec2-open-ssh",
+            "eval-kms-rotation-disabled"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-public-access",
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 0.3333333333333333,
+          "hit_at_3": true,
+          "recall_at_3": 0.6666666666666666,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-public-access": 0.6977350115776062,
+            "eval-ec2-open-rdp": 0.6796071529388428,
+            "eval-iam-admin-policy": 0.672664225101471,
+            "eval-ec2-open-ssh": 0.6628127098083496,
+            "eval-s3-no-encryption": 0.6426985859870911,
+            "eval-cloudtrail-disabled": 0.6328490972518921,
+            "eval-kms-rotation-disabled": 0.5996475219726562,
+            "eval-iam-unused-keys": 0.588120698928833
+          }
+        },
+        {
+          "query": "How do I apply least privilege in AWS?",
+          "system": "Hybrid",
+          "retrieved_finding_ids": [
+            "eval-s3-no-encryption",
+            "eval-ec2-open-rdp",
+            "eval-s3-public-access",
+            "eval-iam-admin-policy",
+            "eval-cloudtrail-disabled"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-admin-policy"
+          ],
+          "first_relevant_rank": 4,
+          "hit_at_1": false,
+          "recall_at_1": 0.0,
+          "hit_at_3": false,
+          "recall_at_3": 0.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-public-access": 0.703219473361969,
+            "eval-iam-admin-policy": 0.6946645379066467,
+            "eval-s3-no-encryption": 0.6920139789581299,
+            "eval-ec2-open-ssh": 0.6699788570404053,
+            "eval-cloudtrail-disabled": 0.6521556377410889,
+            "eval-ec2-open-rdp": 0.6521092653274536,
+            "eval-iam-unused-keys": 0.6467427015304565,
+            "eval-kms-rotation-disabled": 0.6317099332809448
+          }
+        }
+      ],
+      "failures": []
+    },
+    "Hybrid + Reranking": {
+      "metrics": {
+        "hit_at_1": 0.95,
+        "hit_at_3": 1.0,
+        "hit_at_5": 1.0,
+        "recall_at_1": 0.8333333333333334,
+        "recall_at_3": 0.9833333333333332,
+        "recall_at_5": 1.0,
+        "mrr": 0.975
+      },
+      "per_query": [
+        {
+          "query": "How do I fix a public S3 bucket?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-s3-public-access",
+            "eval-s3-no-encryption",
+            "eval-cloudtrail-disabled",
+            "eval-iam-unused-keys",
+            "eval-kms-rotation-disabled"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-public-access"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-public-access": 0.7865979671478271,
+            "eval-s3-no-encryption": 0.7396119832992554,
+            "eval-cloudtrail-disabled": 0.6591334939002991,
+            "eval-kms-rotation-disabled": 0.6529124975204468,
+            "eval-iam-admin-policy": 0.6368479132652283,
+            "eval-iam-unused-keys": 0.6235480904579163,
+            "eval-ec2-open-ssh": 0.5874712467193604,
+            "eval-ec2-open-rdp": 0.5865826606750488
+          }
+        },
+        {
+          "query": "Which finding relates to CIS S3 public access?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-s3-public-access",
+            "eval-s3-no-encryption",
+            "eval-ec2-open-rdp",
+            "eval-ec2-open-ssh",
+            "eval-iam-unused-keys"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-public-access"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-public-access": 0.7920857071876526,
+            "eval-s3-no-encryption": 0.7419167160987854,
+            "eval-iam-admin-policy": 0.7043167352676392,
+            "eval-ec2-open-rdp": 0.6987810134887695,
+            "eval-ec2-open-ssh": 0.696632444858551,
+            "eval-kms-rotation-disabled": 0.6894526481628418,
+            "eval-iam-unused-keys": 0.672758936882019,
+            "eval-cloudtrail-disabled": 0.6496185064315796
+          }
+        },
+        {
+          "query": "Which resource can be accessed by anyone on the internet?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-s3-public-access",
+            "eval-ec2-open-ssh",
+            "eval-iam-admin-policy",
+            "eval-s3-no-encryption",
+            "eval-ec2-open-rdp"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-public-access",
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 0.3333333333333333,
+          "hit_at_3": true,
+          "recall_at_3": 0.6666666666666666,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-public-access": 0.7078051567077637,
+            "eval-iam-admin-policy": 0.6919053792953491,
+            "eval-ec2-open-ssh": 0.6721823215484619,
+            "eval-ec2-open-rdp": 0.6682120561599731,
+            "eval-s3-no-encryption": 0.6203206181526184,
+            "eval-cloudtrail-disabled": 0.6183017492294312,
+            "eval-iam-unused-keys": 0.6017040014266968,
+            "eval-kms-rotation-disabled": 0.5739938020706177
+          }
+        },
+        {
+          "query": "How can I reduce unnecessary access?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-iam-admin-policy",
+            "eval-s3-public-access",
+            "eval-iam-unused-keys",
+            "eval-ec2-open-rdp",
+            "eval-ec2-open-ssh"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-admin-policy",
+            "eval-iam-unused-keys"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 0.5,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-iam-unused-keys": 0.6467971801757812,
+            "eval-iam-admin-policy": 0.6399407386779785,
+            "eval-s3-public-access": 0.6239627003669739,
+            "eval-ec2-open-ssh": 0.6124284267425537,
+            "eval-ec2-open-rdp": 0.6085702776908875,
+            "eval-cloudtrail-disabled": 0.5976482629776001,
+            "eval-s3-no-encryption": 0.5846530199050903,
+            "eval-kms-rotation-disabled": 0.5532432794570923
+          }
+        },
+        {
+          "query": "What is wrong with this IAM policy?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-iam-admin-policy",
+            "eval-iam-unused-keys",
+            "eval-s3-public-access",
+            "eval-kms-rotation-disabled",
+            "eval-s3-no-encryption"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-admin-policy"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-iam-admin-policy": 0.772156298160553,
+            "eval-iam-unused-keys": 0.7570372819900513,
+            "eval-cloudtrail-disabled": 0.6546083688735962,
+            "eval-s3-public-access": 0.6289981007575989,
+            "eval-ec2-open-rdp": 0.6261163949966431,
+            "eval-kms-rotation-disabled": 0.6221895813941956,
+            "eval-ec2-open-ssh": 0.6189754009246826,
+            "eval-s3-no-encryption": 0.5827683806419373
+          }
+        },
+        {
+          "query": "How do I remediate unrestricted SSH access?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp",
+            "eval-iam-unused-keys",
+            "eval-s3-public-access",
+            "eval-iam-admin-policy"
+          ],
+          "relevant_finding_ids": [
+            "eval-ec2-open-ssh"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-ec2-open-ssh": 0.7703991532325745,
+            "eval-ec2-open-rdp": 0.7234310507774353,
+            "eval-iam-unused-keys": 0.677995502948761,
+            "eval-iam-admin-policy": 0.6682415008544922,
+            "eval-s3-public-access": 0.6575613617897034,
+            "eval-s3-no-encryption": 0.6554460525512695,
+            "eval-cloudtrail-disabled": 0.6414777040481567,
+            "eval-kms-rotation-disabled": 0.6224451661109924
+          }
+        },
+        {
+          "query": "Port 22 is exposed to the world",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp",
+            "eval-iam-admin-policy",
+            "eval-s3-public-access",
+            "eval-iam-unused-keys"
+          ],
+          "relevant_finding_ids": [
+            "eval-ec2-open-ssh"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-ec2-open-ssh": 0.7478675842285156,
+            "eval-ec2-open-rdp": 0.7043657302856445,
+            "eval-iam-admin-policy": 0.6601291298866272,
+            "eval-s3-public-access": 0.6286860108375549,
+            "eval-cloudtrail-disabled": 0.6256500482559204,
+            "eval-iam-unused-keys": 0.6202454566955566,
+            "eval-s3-no-encryption": 0.6043732762336731,
+            "eval-kms-rotation-disabled": 0.5884665846824646
+          }
+        },
+        {
+          "query": "How do I secure remote desktop access?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp",
+            "eval-s3-public-access",
+            "eval-iam-unused-keys",
+            "eval-s3-no-encryption"
+          ],
+          "relevant_finding_ids": [
+            "eval-ec2-open-rdp"
+          ],
+          "first_relevant_rank": 2,
+          "hit_at_1": false,
+          "recall_at_1": 0.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-ec2-open-ssh": 0.6946808099746704,
+            "eval-ec2-open-rdp": 0.6890851855278015,
+            "eval-iam-admin-policy": 0.6589733362197876,
+            "eval-iam-unused-keys": 0.6467181444168091,
+            "eval-s3-public-access": 0.64617919921875,
+            "eval-kms-rotation-disabled": 0.6248142123222351,
+            "eval-s3-no-encryption": 0.6200973987579346,
+            "eval-cloudtrail-disabled": 0.610082745552063
+          }
+        },
+        {
+          "query": "Which CIS control covers open SSH security groups?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp",
+            "eval-s3-no-encryption",
+            "eval-iam-unused-keys",
+            "eval-iam-admin-policy"
+          ],
+          "relevant_finding_ids": [
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 0.5,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-ec2-open-ssh": 0.7909408211708069,
+            "eval-ec2-open-rdp": 0.7578162550926208,
+            "eval-iam-admin-policy": 0.7101891040802002,
+            "eval-s3-no-encryption": 0.6919723153114319,
+            "eval-kms-rotation-disabled": 0.6834777593612671,
+            "eval-s3-public-access": 0.6814520359039307,
+            "eval-iam-unused-keys": 0.6694097518920898,
+            "eval-cloudtrail-disabled": 0.6409598588943481
+          }
+        },
+        {
+          "query": "Find the NIST AC-6 least privilege issue",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-iam-admin-policy",
+            "eval-s3-public-access",
+            "eval-iam-unused-keys",
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-admin-policy"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-iam-admin-policy": 0.682459831237793,
+            "eval-iam-unused-keys": 0.654539942741394,
+            "eval-cloudtrail-disabled": 0.6333550810813904,
+            "eval-s3-public-access": 0.6260385513305664,
+            "eval-ec2-open-rdp": 0.6254185438156128,
+            "eval-ec2-open-ssh": 0.6191054582595825,
+            "eval-s3-no-encryption": 0.6060571670532227,
+            "eval-kms-rotation-disabled": 0.6046333909034729
+          }
+        },
+        {
+          "query": "What should I do about old IAM access keys?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-iam-unused-keys",
+            "eval-iam-admin-policy",
+            "eval-s3-public-access",
+            "eval-kms-rotation-disabled",
+            "eval-ec2-open-ssh"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-unused-keys"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-iam-unused-keys": 0.8350347280502319,
+            "eval-iam-admin-policy": 0.7275604009628296,
+            "eval-kms-rotation-disabled": 0.6734037399291992,
+            "eval-cloudtrail-disabled": 0.6252239942550659,
+            "eval-s3-no-encryption": 0.6109012365341187,
+            "eval-ec2-open-rdp": 0.6080862283706665,
+            "eval-ec2-open-ssh": 0.6023080348968506,
+            "eval-s3-public-access": 0.5994471311569214
+          }
+        },
+        {
+          "query": "Which finding maps to NIST IA-5?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-iam-unused-keys",
+            "eval-iam-admin-policy",
+            "eval-s3-public-access",
+            "eval-cloudtrail-disabled",
+            "eval-ec2-open-rdp"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-unused-keys"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-iam-unused-keys": 0.675920844078064,
+            "eval-iam-admin-policy": 0.6611125469207764,
+            "eval-cloudtrail-disabled": 0.605363130569458,
+            "eval-ec2-open-rdp": 0.5828106999397278,
+            "eval-kms-rotation-disabled": 0.5763787627220154,
+            "eval-ec2-open-ssh": 0.5718492865562439,
+            "eval-s3-public-access": 0.5606935620307922,
+            "eval-s3-no-encryption": 0.5548023581504822
+          }
+        },
+        {
+          "query": "How can I encrypt new objects in S3?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-s3-no-encryption",
+            "eval-s3-public-access",
+            "eval-kms-rotation-disabled",
+            "eval-iam-unused-keys",
+            "eval-ec2-open-ssh"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-no-encryption"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-no-encryption": 0.7638788223266602,
+            "eval-s3-public-access": 0.7064310312271118,
+            "eval-kms-rotation-disabled": 0.6290544271469116,
+            "eval-iam-admin-policy": 0.6021682024002075,
+            "eval-iam-unused-keys": 0.600645124912262,
+            "eval-ec2-open-ssh": 0.5963252186775208,
+            "eval-ec2-open-rdp": 0.5768129825592041,
+            "eval-cloudtrail-disabled": 0.5650051832199097
+          }
+        },
+        {
+          "query": "Which bucket is missing encryption at rest?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-s3-no-encryption",
+            "eval-s3-public-access",
+            "eval-cloudtrail-disabled",
+            "eval-kms-rotation-disabled",
+            "eval-iam-unused-keys"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-no-encryption"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-no-encryption": 0.780353844165802,
+            "eval-s3-public-access": 0.7207961082458496,
+            "eval-cloudtrail-disabled": 0.7051832675933838,
+            "eval-kms-rotation-disabled": 0.6810579895973206,
+            "eval-iam-unused-keys": 0.6797999143600464,
+            "eval-ec2-open-ssh": 0.677054762840271,
+            "eval-ec2-open-rdp": 0.6659963130950928,
+            "eval-iam-admin-policy": 0.6615743041038513
+          }
+        },
+        {
+          "query": "How do I restore AWS audit logs?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-cloudtrail-disabled",
+            "eval-iam-unused-keys",
+            "eval-s3-public-access",
+            "eval-s3-no-encryption",
+            "eval-iam-admin-policy"
+          ],
+          "relevant_finding_ids": [
+            "eval-cloudtrail-disabled"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-cloudtrail-disabled": 0.7572016716003418,
+            "eval-iam-unused-keys": 0.6847394108772278,
+            "eval-iam-admin-policy": 0.6791704893112183,
+            "eval-s3-no-encryption": 0.6422667503356934,
+            "eval-s3-public-access": 0.6405038833618164,
+            "eval-ec2-open-rdp": 0.6294357776641846,
+            "eval-ec2-open-ssh": 0.6252084970474243,
+            "eval-kms-rotation-disabled": 0.6213698387145996
+          }
+        },
+        {
+          "query": "Which finding maps to NIST AU-2?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-cloudtrail-disabled",
+            "eval-iam-unused-keys",
+            "eval-ec2-open-rdp",
+            "eval-ec2-open-ssh",
+            "eval-s3-public-access"
+          ],
+          "relevant_finding_ids": [
+            "eval-cloudtrail-disabled"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-iam-admin-policy": 0.6604095697402954,
+            "eval-iam-unused-keys": 0.6378613710403442,
+            "eval-cloudtrail-disabled": 0.6156869530677795,
+            "eval-ec2-open-rdp": 0.6061036586761475,
+            "eval-kms-rotation-disabled": 0.5993170142173767,
+            "eval-s3-public-access": 0.5990515947341919,
+            "eval-ec2-open-ssh": 0.5968978404998779,
+            "eval-s3-no-encryption": 0.5881094932556152
+          }
+        },
+        {
+          "query": "How do I rotate a KMS key?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-kms-rotation-disabled",
+            "eval-iam-unused-keys",
+            "eval-s3-no-encryption",
+            "eval-s3-public-access",
+            "eval-ec2-open-ssh"
+          ],
+          "relevant_finding_ids": [
+            "eval-kms-rotation-disabled"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-kms-rotation-disabled": 0.7963688373565674,
+            "eval-iam-unused-keys": 0.6836510896682739,
+            "eval-s3-no-encryption": 0.6211885809898376,
+            "eval-cloudtrail-disabled": 0.5718748569488525,
+            "eval-iam-admin-policy": 0.5699694156646729,
+            "eval-ec2-open-rdp": 0.5515706539154053,
+            "eval-ec2-open-ssh": 0.5387262105941772,
+            "eval-s3-public-access": 0.5364465117454529
+          }
+        },
+        {
+          "query": "Which finding concerns cryptographic key rotation?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-kms-rotation-disabled",
+            "eval-iam-unused-keys",
+            "eval-s3-no-encryption",
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp"
+          ],
+          "relevant_finding_ids": [
+            "eval-kms-rotation-disabled"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-kms-rotation-disabled": 0.7477196455001831,
+            "eval-iam-unused-keys": 0.7379727363586426,
+            "eval-s3-no-encryption": 0.6503592133522034,
+            "eval-iam-admin-policy": 0.6438520550727844,
+            "eval-ec2-open-rdp": 0.6186873912811279,
+            "eval-ec2-open-ssh": 0.6163030862808228,
+            "eval-cloudtrail-disabled": 0.6002910733222961,
+            "eval-s3-public-access": 0.5947977304458618
+          }
+        },
+        {
+          "query": "What exposes a service directly to the internet?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-s3-public-access",
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp",
+            "eval-s3-no-encryption",
+            "eval-cloudtrail-disabled"
+          ],
+          "relevant_finding_ids": [
+            "eval-s3-public-access",
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 0.3333333333333333,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-public-access": 0.6977350115776062,
+            "eval-ec2-open-rdp": 0.6796071529388428,
+            "eval-iam-admin-policy": 0.672664225101471,
+            "eval-ec2-open-ssh": 0.6628127098083496,
+            "eval-s3-no-encryption": 0.6426985859870911,
+            "eval-cloudtrail-disabled": 0.6328490972518921,
+            "eval-kms-rotation-disabled": 0.5996475219726562,
+            "eval-iam-unused-keys": 0.588120698928833
+          }
+        },
+        {
+          "query": "How do I apply least privilege in AWS?",
+          "system": "Hybrid + Reranking",
+          "retrieved_finding_ids": [
+            "eval-iam-admin-policy",
+            "eval-iam-unused-keys",
+            "eval-s3-public-access",
+            "eval-ec2-open-ssh",
+            "eval-ec2-open-rdp"
+          ],
+          "relevant_finding_ids": [
+            "eval-iam-admin-policy"
+          ],
+          "first_relevant_rank": 1,
+          "hit_at_1": true,
+          "recall_at_1": 1.0,
+          "hit_at_3": true,
+          "recall_at_3": 1.0,
+          "hit_at_5": true,
+          "recall_at_5": 1.0,
+          "semantic_scores": {
+            "eval-s3-public-access": 0.703219473361969,
+            "eval-iam-admin-policy": 0.6946645379066467,
+            "eval-s3-no-encryption": 0.6920139789581299,
+            "eval-ec2-open-ssh": 0.6699788570404053,
+            "eval-cloudtrail-disabled": 0.6521556377410889,
+            "eval-ec2-open-rdp": 0.6521092653274536,
+            "eval-iam-unused-keys": 0.6467427015304565,
+            "eval-kms-rotation-disabled": 0.6317099332809448
+          }
+        }
+      ],
+      "failures": []
+    }
+  },
+  "best_configuration": "Hybrid + Reranking"
+}

@@ -1,0 +1,48 @@
+# Python
+.venv/
+venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Backend runtime data
+*.db
+*.sqlite
+*.sqlite3
+generated_reports/
+backend/generated_reports/
+data/rag/
+backend/data/rag/
+data/
+*.log
+
+# FastEmbed and model caches
+.cache/
+model_cache/
+fastembed_cache/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/tsconfig.tsbuildinfo
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
