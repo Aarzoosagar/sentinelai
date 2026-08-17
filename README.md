@@ -6,6 +6,8 @@ SentinelAI connects to an AWS account with read-only credentials, audits IAM, S3
 
 > SentinelAI never modifies AWS resources. Every AWS API call made by the collectors is `Describe`/`Get`/`List`-class, and a runtime guard (`services/aws/client_factory.py`) blocks any mutating call before it reaches the network — see [Read-only enforcement](#read-only-enforcement).
 
+**Live Demo:** [http://13.63.129.188](http://13.63.129.188)
+
 ---
 
 ## Table of Contents
@@ -278,6 +280,8 @@ SentinelAI provides local structured AI telemetry with request, audit, and opera
 ---
 
 ## Deployment
+
+**Live URL:** [http://13.63.129.188](http://13.63.129.188)
 
 SentinelAI has been deployed on AWS EC2 with:
 
